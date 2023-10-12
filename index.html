@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
 
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Advent Pro:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mouse Memoirs:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <a class="desktop-1" target="_blank" data-animate-on-scroll>
+      <div class="desktop-2"></div>
+      <div class="desktop-1-child"></div>
+      <img class="desktop-1-item" alt="" src="./public/rectangle-2.svg" />
+
+      <b class="publications">PUBLICATIONS</b>
+      <b class="home">HOME</b>
+      <div class="my-library">MY <span class="span"> </span>LIBRARY</div>
+      <b class="about-us">ABOUT US</b>
+      <b class="our-books">OUR BOOKS</b>
+      <b class="blog">BLOG</b>
+      <b class="authors">AUTHORS</b>
+      <b class="events">EVENTS</b>
+      <div class="desktop-1-inner"></div>
+      <div class="rectangle-div"></div>
+      <div class="desktop-1-child1"></div>
+      <div class="desktop-1-child2"></div>
+      <div class="desktop-1-child3"></div>
+      <div class="desktop-1-child4"></div>
+      <b class="book-name">BOOK NAME</b>
+      <b class="author">AUTHOR</b>
+      <b class="publication">PUBLICATION</b>
+      <b class="search-book">
+        <p class="scroll-through">SEARCH BOOK</p>
+      </b>
+      <b class="welcome-to-the">WELCOME TO THE LIBRARY</b>
+      <b class="explore-through-our">EXPLORE THROUGH OUR COLLECTION OF BOOKS</b>
+      <img class="line-icon" alt="" src="./public/line-8.svg" />
+
+      <img class="desktop-1-child5" alt="" src="./public/line-8.svg" />
+
+      <button class="rectangle-button"></button>
+      <button class="desktop-1-child6"></button>
+      <button class="desktop-1-child7"></button>
+      <button class="desktop-1-child8"></button>
+      <b class="ebooks">EBOOKS</b>
+      <b class="magazines">MAGAZINES</b>
+      <b class="editions">EDITIONS</b>
+      <b class="top-authors">TOP AUTHORS</b>
+      <b class="scroll-through-variety-container">
+        <p class="scroll-through">SCROLL THROUGH</p>
+        <p class="scroll-through">VARIETY OF BOOKS</p>
+      </b>
+      <b class="find-hundreds-of-container">
+        <p class="scroll-through">FIND HUNDREDS</p>
+        <p class="scroll-through">OF MAGAZINES</p>
+      </b>
+      <b class="find-books-based-container">
+        <p class="scroll-through">FIND BOOKS BASED</p>
+        <p class="scroll-through">ON THEIR EDITION</p>
+      </b>
+      <b class="find-authors-and-container">
+        <p class="scroll-through">FIND AUTHORS AND</p>
+        <p class="scroll-through">THEIR TOP BOOKS</p>
+      </b>
+      <img
+        class="untitled-design-1-1"
+        alt=""
+        src="./public/untitled-design-1-1@2x.png"
+      />
+
+      <div class="discover-read-learn">"Discover, Read, Learn Online"</div>
+      <p class="your-library-just">Your Library, Just a Click Away</p>
+      <div class="desktop-1-child9"></div>
+      <div class="desktop-1-child10"></div>
+      <div class="desktop-1-child11"></div>
+      <div class="desktop-1-child12"></div>
+      <div class="line-div"></div>
+      <img class="desktop-1-child13" alt="" src="./public/line-11.svg" />
+
+      <div class="desktop-1-child14"></div>
+      <img class="desktop-1-child15" alt="" src="./public/line-13.svg" />
+
+      <img class="desktop-1-child16" alt="" src="./public/line-14.svg" />
+
+      <div class="desktop-1-child17"></div>
+      <div class="desktop-1-child18"></div>
+    </a>
+
+    <script>
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>
+</html>

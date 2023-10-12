@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-mouse-memoirs: "Mouse Memoirs";
+  --font-advent-pro: "Advent Pro";
+
+  /* font sizes */
+  --font-size-base: 16px;
+  --font-size-5xl: 24px;
+  --font-size-21xl: 40px;
+  --font-size-33xl: 52px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-cornflowerblue-100: #9ca3e4;
+  --color-black: #000;
+
+  /* Border radiuses */
+  --br-2xl: 21px;
+}
